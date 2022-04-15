@@ -1,0 +1,54 @@
+version: "3.6"
+
+services:
+  postgres-db:
+    image: timescale/timescaledb:latest-pg13
+    environment:
+      POSTGRES_DB: financial-storage
+      POSTGRES_USER: storage-user
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    container_name: postgres-financial-storage
+    networks:
+      - financial-storage-network
+
+  migration:
+    image: financial-storage-migration
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    container_name: financial-storage-migration
+    networks:
+      - financial-storage-network
+
+  storage-api:
+    image: financial-storage-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
+    ports:
+      - "5000:80"
+    container_name: financial-storage-api
+    networks:
+      - financial-storage-network
+
+  background-workers:
+    image: financial-storage-background-workers
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_FORWARDEDHEADERS_ENABLED: "true"
+    ports:
+      - "5001:80"
+    container_name: financial-storage-background-workers
+    networks:
+      - financial-storage-network
+
+volumes:
+  db-data:
+    external: true
+
+networks:
+  financial-storage-network:
+    driver: bridge
