@@ -1,0 +1,11 @@
+Name,Ticker,Currency,SourceName,PageUrl
+Microsoft,MSFT,USD,dividend.com,https://www.dividend.com/stocks/technology/software/infrastructure-software/msft-microsoft/
+Starbucks,SBUX,USD,dividend.com,https://www.dividend.com/stocks/consumer-discretionary/gaming-lodging-restaurants/restaurants/sbux-starbucks/
+Citigroup,C,USD,dividend.com,https://www.dividend.com/stocks/financials/banking/diversified-banks/c-citigroup/
+AT&T,T,USD,dividend.com,https://www.dividend.com/stocks/communications/telecommunication/telecom-carriers/t-atandt/
+Intel,INTC,USD,dividend.com,https://www.dividend.com/stocks/technology/semiconductors/semiconductor-devices/intc-intel-corp/
+NVIDIA,NVDA,USD,dividend.com,https://www.dividend.com/stocks/technology/semiconductors/semiconductor-devices/nvda-nvidia-corporation/
+Danone,DANOY,USD,dividend.com,https://www.dividend.com/stocks/consumer-staples/consumer-products/packaged-food/danoy-danone-adr/
+IBM,IBM,USD,dividend.com,https://www.dividend.com/stocks/technology/technology-services/it-services/ibm-ibm-corp/
+PepsiCo,PEP,USD,dividend.com,https://www.dividend.com/stocks/consumer-staples/consumer-products/beverages/pep-pepsico/
+Goldman Sachs,GS,USD,dividend.com,https://www.dividend.com/stocks/financials/institutional-financial-service/institutional-brokerage/gs-goldman-sachs/

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="appsettings.Production.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <DependentUpon>appsettings.json</DependentUpon>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CsvHelper" Version="27.2.1" />
+        <PackageReference Include="Dapper" Version="2.0.123" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Npgsql" Version="6.0.3" />
+        <PackageReference Include="Npgsql.Json.NET" Version="6.0.3" />
+        <PackageReference Include="Simple.Migrations" Version="0.9.21" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <UserSecretsId>dotnet-FinancialStorage.BackgroundWorkers-A23E850D-3FFF-4188-B2BE-03BD8016C629</UserSecretsId>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Hangfire" Version="1.7.28" />
+        <PackageReference Include="Hangfire.Core" Version="1.7.28" />
+        <PackageReference Include="Hangfire.PostgreSql" Version="1.9.7" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+        <PackageReference Include="NetCore.AutoRegisterDi" Version="2.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FinancialStorage.BackgroundWorkers.Application\FinancialStorage.BackgroundWorkers.Application.csproj" />
+      <ProjectReference Include="..\FinancialStorage.BackgroundWorkers.DataAccess\FinancialStorage.BackgroundWorkers.DataAccess.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.Production.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+    </ItemGroup>
+</Project>

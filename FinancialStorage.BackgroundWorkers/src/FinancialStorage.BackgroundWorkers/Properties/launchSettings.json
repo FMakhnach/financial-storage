@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "FinancialStorage.BackgroundWorkers [development]": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5002",
+      "launchUrl": "hangfire",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
